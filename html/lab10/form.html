@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            background-color: cadetblue;
+            color: white;
+            padding: 10px;
+            width: fit-content;
+            margin-bottom: 20px;
+            border-radius : 10px;
+        }
+        form {
+            background-color: cadetblue;
+            width: fit-content;
+            margin-bottom: 10px;
+            color : white;
+            padding: 20px;
+            border-radius : 10px;
+            
+        }
+        input{
+            background-color: wheat;
+            margin-bottom: 10px;
+            color : black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>회원가입 페이지 입니다</h1>
+    <form name="form1" action="form_ok.php" onsubmit="return validateForm()" method="post">
+        이름: <input id='name' type='text' name='name'><br>
+        성별 : <input id='gender' type='radio' name='gender' value="M" checked>남 <input type='radio' name='gender' value="W">여 <br>
+        아이디 : <input id='account' type='text' name='account'><br>
+        비밀번호 : <input id='password' type='text' name='password'><br>
+        자기소개 : <textarea id='introduce' name='introduce' cols='20' rows="5"></textarea><br><br>
+        국적 : <select name='country' id="mySelect" onchange="myFunction()">
+            <option value="Korea">Korea</option>
+            <option value="Japan">Japan</option>
+            <option value="China">China</option>
+            <option value="USA">USA</option>
+        </select>
+        <p id="demo"></p>
+        <input type='submit' value='저장' onclick="onClickFunction()"><br>
+        <img onmouseover="bigImage(this)" onmouseout="smallImage(this)" src="images/hunseong.png" alt="My Image" width="200" height="100">
+        
+    </form>
+    <script>
+        function validateForm(){
+            //이름 입력하지 않았을 경우
+            var name = document.getElementById("name").value;
+          var gender = document.getElementById("gender").value;
+          var account = document.getElementById("account").value;
+          var password = document.getElementById("password").value;
+          var introduce = document.getElementById("introduce").value;
+          var mySelect = document.getElementById("mySelect").value;
+          alert("입력하신 정보입니다.\n\n 이름: " + name + "\n 성별: " + gender + "\n 아이디: " + account + "\n 비밀번호: " + password + "\n 자기소개: " + introduce + "\n 국적: " + mySelect);
+
+            if(name ==""){
+                alert("이름을 입력하세요");
+                return false;
+            }
+            if(name.length < 2){
+                alert("이름을 2글자 이상 입력하세요.");
+                return false;
+            }
+            //아이디 입력하지 않았을 경우
+
+            if(account ==""){
+                alert("아이디를 입력하세요");
+
+                return false;
+            }
+            if(account.length < 4){
+                alert("아이디를 4글자 이상 입력하세요.");
+
+                return false;
+            }
+            //비번 입력하지 않았을 경우
+
+            if(password ==""){
+                alert("비밀번호를 입력하세요");
+
+                return false;
+            }
+            if(password.length < 4){
+                alert("비밀번호를 4글자 이상 입력하세요.");
+
+                return false;
+            }
+            //자기소개 입력하지 않았을 경우
+
+            if(introduce ==""){
+                alert("자기소개를 입력하세요");
+
+                return false;
+            }
+            if(introduce.length < 5){
+                alert("자기소개를 5글자 이상 입력하세요.");
+
+                return false;
+            }
+        }
+        function myFunction() {
+          var x = document.getElementById("mySelect").value;
+          document.getElementById("demo").innerHTML = "선택하신 국적 : " + x;
+        }
+        
+
+        function bigImage(x) {
+            x.style.height = "200px";
+            x.style.width = "400px";
+        }
+        function smallImage(x) {
+            x.style.height = "100px";
+            x.style.width = "200px";
+        }
+    </script>
+</body>
+</html>
