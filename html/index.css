@@ -4,7 +4,10 @@ body, bottom{
     max-width: 1200px;
 }
 
-
+.nevbar-logo{
+    display: flex;
+    justify-content: center;
+}
 
 li, ul{
     list-style: none;
@@ -231,4 +234,16 @@ footer > div > ul > li{
 
 footer > div > ul > li:hover{
     color: rgb(253, 70, 70);
+}
+
+.aside {
+        position:fixed; 
+        width: 100px;
+        display:inline-block;
+        right:50px;
+        height: 100px; 
+        top: 85%;
+        background-color: transparent;
+        margin:0;
+        box-shadow:3px 3px 3px 3px gray;
 }
