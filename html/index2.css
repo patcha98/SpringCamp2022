@@ -2,6 +2,7 @@ body, bottom{
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
+    
 }
 
 .nevbar-logo{
@@ -70,22 +71,27 @@ body {
     display:block;
     text-align: left;
     position: absolute;
-    padding-top: 10px;
     width: auto;
     height: auto;
     color: black;
     padding: 0;
-    margin: 0;
-    padding-top: 20px;
+    margin-top: 15px;
+    background-color: white;
+    border-color: black;
+    border: 1px solid black;
+    padding-bottom: 8px;
 }
 
 .navbar .lang > ul > li:hover {
     color: rgb(253, 87, 87);
+    background-color: silver;
 }
 
 
 .navbar .lang > ul > li {
     margin-top: 5px;
+    width:80px;
+    text-align: center;
 }
 
 .hero-header{
@@ -130,8 +136,8 @@ body {
     margin-right: 10%;
 }
 .line{
-    margin-top: 10%;
-    margin-bottom: 3%;
+    margin-top: 7%;
+    margin-bottom: 7%;
     width: 90%;
 }
 
@@ -220,6 +226,7 @@ footer hr{
     margin-bottom: 50px;
 }
 
+
 footer > div > ul{
 
     text-align: center;
@@ -245,3 +252,12 @@ footer > div > ul > li:hover{
         margin:0;
         box-shadow:3px 3px 3px 3px gray;
 }
+
+.download-list{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+input:focus {outline:none;}
